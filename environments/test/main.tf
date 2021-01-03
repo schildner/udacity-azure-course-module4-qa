@@ -14,14 +14,14 @@ terraform {
   }
 }
 module "resource_group" {
-  source               = "./modules/resource_group"
+  source               = "../../modules/resource_group"
   resource_group       = var.resource_group
   location             = var.location
 }
 
 # Reference the AppService Module here.
 module "appservice" {
-  source               = "./modules/appservice"
+  source               = "../../modules/appservice"
   resource_group       = var.resource_group
   location             = var.location
 }
